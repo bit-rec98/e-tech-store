@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Shopping Cart</h1>
+    
+    <div class="cart-container" *ngIf="cartItems.length > 0">
+      <div class="cart-items">
+        <mat-card *ngFor="let item of cartItems">
+          <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+            <mat-card-subtitle>{{item.quantity}} sets</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+              <p>Price: {{item.price | currency}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-icon-button color="warn" (click)="removeItem(item)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
+      <mat-card class="order-summary">
+        <mat-card-header>
+          <mat-card-title>Order Summary</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="summary-item">
+            <span>Subtotal:</span>
+            <span>{{subtotal | currency}}</span>
+          </div>
+          <div class="summary-item">
+            <span>Shipping:</span>
+            <span>{{shipping | currency}}</span>
+          </div>
+          <div class="summary-item total">
+            <span>Total:</span>
+            <span>{{total | currency}}</span>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="checkout-button">
+            Proceed to Checkout
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div class="empty-cart" *ngIf="cartItems.length === 0">
+      <mat-icon>shopping_cart</mat-icon>
+      <p>Your cart is empty</p>
+      <button mat-raised-button color="primary" routerLink="/products">
+        Browse Products
+      </button>
+    </div>
+  </div>

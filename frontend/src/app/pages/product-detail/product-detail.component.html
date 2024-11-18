@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="product-detail">
+      <div class="product-info">
+        <img [src]="product.image" [alt]="product.name">
+        <div class="info-content">
+          <h1>{{product.name}}</h1>
+          <p class="description">{{product.description}}</p>
+          <p class="base-price">Base Price: {{product.basePrice | currency}}/unit</p>
+        </div>
+      </div>
+
+      <h2>Available Sets</h2>
+      <div class="sets-grid">
+        <mat-card *ngFor="let set of product.sets">
+          <mat-card-header>
+            <mat-card-title>{{set.name}}</mat-card-title>
+            <mat-card-subtitle>{{set.quantity}} units</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+              <p>Price: {{set.price | currency}}</p>
+              <p>Savings: {{set.savings}}%</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary">
+              Add to Cart
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,49 @@
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .order-info {
+    margin: 1rem 0;
+  }
+
+  .status {
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+
+  .shipped {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .delivered {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+
+  .cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+
+  .empty-orders {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .empty-orders mat-icon {
+    font-size: 4rem;
+    width: 4rem;
+    height: 4rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }

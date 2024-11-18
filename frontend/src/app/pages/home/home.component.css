@@ -1,0 +1,52 @@
+.hero {
+    background: linear-gradient(rgba(25, 118, 210, 0.9), rgba(25, 118, 210, 0.7)),
+                url('/assets/hero-bg.jpg') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+
+  mat-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-card-content {
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }

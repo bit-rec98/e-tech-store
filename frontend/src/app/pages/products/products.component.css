@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  mat-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-card-content {
+    flex-grow: 1;
+  }
+
+  .availability {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
